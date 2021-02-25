@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NDN795W');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Put Squid Anywhere!</title>
+    <link rel="icon" href="./static/favicon.png">
+    <link rel="icon apple-touch-icon" href="./static/favicon.png">
+    <meta name="description" content="Enter city/address in bar, right click to 'save as'.">
+    <meta name="keywords" content="Squid, Bright Green Field, Narrator, Warp, Records, House, Plants, Broadcaster, Sludge">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Put Squid Anywhere!">
+    <meta name="twitter:description" content="Enter city/address in bar, right click to 'save as'.">
+    <meta name="twitter:site" content="@squidbanduk">
+    <meta name="twitter:creator" content="@squidbanduk">
+    <meta name="twitter:image" content="https://anywhere.squidband.uk/static/sharing.jpg">
+
+    <meta property="og:title" content="Put Squid Anywhere!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Enter city/address in bar, right click to 'save as'." />
+    <meta property="og:site_name" content="Squid" />
+    <meta property="og:url" content="https://anywhere.squidband.uk" />
+    <meta property="og:image" content="https://anywhere.squidband.uk/static/sharing.jpg"/>
+
+    <style>
+
+    @font-face {
+      font-family: 'N';
+      src: url(./static/NimbusSanL-Reg.woff);
+    }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        line-height: 1.5;
+        font-size: 22px;
+        font-family: 'N', 'Helvetica', 'Arial', sans-serif;
+      }
+
+      a {
+        color: black;
+      }
+
+      .content {
+        position: relative;
+        padding: 1rem;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .footer {
+        width: 100vw;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        width: 300px;
+        border-radius: 50px;
+        border: 2px solid black;
+        overflow: hidden;
+        background: white;
+      }
+
+      form input {
+        font-size: inherit;
+        background: transparent;
+        padding: 0.5rem 1rem;
+        width: 75%;
+        border: none;
+      }
+
+      form input:focus {
+        outline: none;
+        border: none;
+      }
+
+      form input:last-child {
+        width: 25%;
+        border-left: 2px solid black;
+        font-size: 26px;
+      }
+
+      form input:last-child:hover {
+        cursor: pointer;
+      }
+
+      form label {
+        display: none;
+      }
+
+      .panel {
+        position: absolute;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem 3rem;
+      }
+
+      .panel.open {
+        padding: 1rem;
+        height: 100%;
+        justify-content: space-between;
+      }
+
+      .panel.open h1 {
+        padding: 0;
+      }
+
+      .panel h1 {
+        font-size: 28px;
+        padding: 1rem 0;
+      }
+
+      .panel .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .panel p {
+        font-size: 16px;
+        margin-top: 1rem;
+        text-align: center;
+      }
+
+      .panel.open p {
+        margin-top: 0.5rem;
+      }
+
+      .content img {
+        position: absolute;
+        height: 70%;
+        margin-bottom: 3rem;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        padding: 11px;
+      }
+
+      .header a {
+        position: fixed;
+        height: 100px;
+        width: 100px;
+        cursor: pointer;
+      }
+
+      .logo {
+        display: block;
+        height: 100px;
+        animation: rotation 60s infinite linear;
+        cursor: pointer;
+        opacity: 0.9;
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-359deg);
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .logo {
+          height: 50px;
+        }
+
+        .content img {
+          height: 60%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDN795W"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="header">
+      <a href="https://squidband.uk"><img class="logo" src="./static/world-thumbnail-2.png" alt=""></a>
+    </div>
+
+    <div class="content">
+      <title>
+          Put Squid Anywhere In The World!
+      </title>
+
+      {% if image %}
+      <div class="panel open">
+      {% else %}
+      <div class="panel">
+      {% endif %}
+        {% if location %}
+        <h1>Squid in {{ location }}</h1>
+        {% else %}
+        <h1>Put Squid Anywhere</h1>
+        {% endif %}
+
+        <div class="form">
+          <form action="" method="post">
+              <label for="address/location">Address/Location</label>
+              <input type="text" name="address/location" placeholder="Enter a Location">
+              <input type="submit" value="&rarr;">
+          </form>
+
+          <p>Enter city/address in bar, right click to 'save as'.<br>Not found? Download the original PNG <a href="https://anywhere.squidband.uk/static/squid-anywhere.png">here</a>.</p>
+        </div>
+      </div>
+
+      {% if image %}
+      <img id="picture" src="data:image/jpeg;base64,{{ image }}">
+      {% endif %}
+    </div>
+
+
+    <div class="footer">
+      <p>Based on a project by <a href="https://twitter.com/nick_sawhney" target="_blank">Nick Sawhney</a>. Code modified 19/02/21 under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">GNU Affero General Public License</a>. Source code available <a href="https://github.com/warprecords/squidanywhere" target="_blank">here</a>.<p>
+    </div>
+
+  </body>
+</html>

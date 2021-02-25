@@ -1,0 +1,15 @@
+{
+  "name": "Put Squid Anywhere!",
+  "description": "Enter city/address in bar, right click to 'save as'.",
+  "repository": "https://github.com/warprecords/squidanywhere",
+  "logo": "https://anywhere.squidband.uk/static/sharing.jpg",
+  "keywords": ["Squid", "Bright Green Field", "Narrator", "Warp", "Records", "House", "Plants", "Broadcaster", "Sludge"],
+  "env": {
+ 	"KEY": {
+	  "description": "Your Google API Key"
+    },
+	"SECRET": {
+	  "description": "Google Cloud API Secret for signing URLs"
+    }
+  }
+}
